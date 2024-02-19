@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randomizer</title>
+</head>
+<body>
+    <!--div for adding new player-->
+    <div id="addPlayerDiv">
+        <input type="text" id="playerNameInput" placeholder="Enter player name">
+        <button id="playerNameSubmit">Add Player</button>
+    </div>
+    <!--div for displaying players-->
+    <div id="showPlayersDiv">
+        <table id="playersTable">
+            <thead>
+                <th>Player</th>
+                <th>Position</th>
+            </thead>
+            <tbody id="playersTableBody"></tbody>
+        </table>
+    </div>
+
+    <script src="Players.js"></script>
+    <script src="Script.js"></script>  
+</body>
+</html>
