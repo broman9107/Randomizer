@@ -6,7 +6,7 @@
 
 body{
     font-family: 'Poppins', sans-serif;
-    background-color: #4C5355;
+    background-color: #1D2B53;
     display: grid;
     height: 95vh;
     width: 95vw;
@@ -26,18 +26,39 @@ body{
     border-radius: 5px;
 }
 
+select:required:invalid {
+    color: gray;
+}
+
+option[value=""][disabled] {
+    display: none;
+}
+
+option {
+    color: black;
+}
+
+#playerPositionInput{
+    font-size: 1.5rem;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 #playerNameSubmit{
     font-size: 1rem;
     padding: 10px;
     border: 1px solid #000;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #b43539;
+    background-color: #FF004D;
     color: white;
 }
 
 #playerNameSubmit:hover{
-    background-color: #ff5358;
+    background-color: #FAEF5D;
+    color: black;
     transition: background-color 0.3s ease;
 }
 
@@ -46,4 +67,46 @@ body{
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
+    height: 90%;
+    overflow: auto;
 }
+
+#playersTable{
+    width: 60%;
+    font-size: 1.5rem;
+    border-spacing: 0;
+    user-select: none;
+}
+
+#playersTable th{
+    position: sticky;
+    top: 0;
+    padding: 5px;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid #000000;
+    background-color: #FF004D;
+    color: white;
+}
+
+#playersTable a{
+    text-decoration: none;
+    color: white;
+}
+
+#playersTable tr{
+    background-color: #7E2553;
+}
+
+#playersTable tr:hover{
+    background-color: #5d91fa;
+}
+
+#playersTable td{
+    padding: 5px;
+    text-align: left;
+    font-size: 16px;
+    color: white;
+    border: 1px solid #000;
+}
+

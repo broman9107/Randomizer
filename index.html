@@ -9,17 +9,29 @@
 <body>
     <!--div for adding new player-->
     <div id="addPlayerDiv">
-        <input type="text" id="playerNameInput" placeholder="Enter player name">
-        <button id="playerNameSubmit">Add Player</button>
+        <form id="addPlayerForm">
+            <input type="text" id="playerNameInput" placeholder="Enter player name" required>
+            <select id="playerPositionInput" required>
+                <option value="" disabled selected hidden>Position</option>
+                <option value="Guard">Guard</option>
+                <option value="Forward">Forward</option>
+                <option value="Center">Center</option>
+            </select>
+            <input type="submit" id="playerNameSubmit" value="Add Player"></input>
+        </form>
     </div>
     <!--div for displaying players-->
     <div id="showPlayersDiv">
         <table id="playersTable">
             <thead>
-                <th>Player</th>
-                <th>Position</th>
+                <tr>
+                    <th><a href="#" id="playerSort">Player</a></th>
+                    <th><a href="#" id="positionSort">Position</a></th>
+                </tr>
             </thead>
-            <tbody id="playersTableBody"></tbody>
+            <tbody id="playersTableBody">
+                <!-- Add table rows dynamically using JavaScript -->
+            </tbody>
         </table>
     </div>
 
