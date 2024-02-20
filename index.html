@@ -7,7 +7,7 @@
     <title>Randomizer</title>
 </head>
 <body>
-    <!--div for adding new player-->
+    <!--Left side of screen div-->
     <div id="addPlayerDiv">
         <form id="addPlayerForm">
             <input type="text" id="playerNameInput" placeholder="Enter player name" required>
@@ -19,8 +19,9 @@
             </select>
             <input type="submit" id="playerNameSubmit" value="Add Player"></input>
         </form>
+        <button id="randomizeButton">Randomize</button>
     </div>
-    <!--div for displaying players-->
+    <!--Right side of screen div-->
     <div id="showPlayersDiv">
         <table id="playersTable">
             <thead>
@@ -33,6 +34,13 @@
                 <!-- Add table rows dynamically using JavaScript -->
             </tbody>
         </table>
+    </div>
+
+    <!--Modal for random players-->
+    <div id="randomPlayersModal" class="modal">
+        <div id="modalContent">
+            <span id="modalClose" class="close">&times;</span>
+        </div>
     </div>
 
     <script src="Players.js"></script>
