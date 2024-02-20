@@ -33,13 +33,34 @@
             <tbody id="playersTableBody">
                 <!-- Add table rows dynamically using JavaScript -->
             </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2" id="playerCount">
+                        <!-- Add Player Count with JavaScript -->
+                    </td>
+                </tr>
+            </tfoot>
         </table>
     </div>
 
     <!--Modal for random players-->
     <div id="randomPlayersModal" class="modal">
         <div id="modalContent">
-            <span id="modalClose" class="close">&times;</span>
+            <p id="modalClose" class="close">&times;</p>
+            <div id="teamsDiv">
+                <div>
+                    <h1>Team 1</h1>
+                    <p id="team1Players" class="teamList">
+                        <!-- Add list items dynamically using JavaScript -->
+                    </p>
+                </div>
+                <div>
+                    <h1>Team 2</h1>
+                    <p id="team2Players" class="teamList">
+                        <!-- Add list items dynamically using JavaScript -->
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 

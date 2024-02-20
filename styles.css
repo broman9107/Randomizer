@@ -103,20 +103,23 @@ option {
 
 #playersTable{
     width: 60%;
-    font-size: 1.5rem;
     border-spacing: 0;
     user-select: none;
 }
 
-#playersTable th{
+#playersTable thead, tfoot{
     position: sticky;
     top: 0;
-    padding: 5px;
+    bottom: 0;
     text-align: center;
-    font-size: 20px;
-    border: 1px solid #000000;
+    font-size: 1.5rem;
     background-color: #FF004D;
     color: white;
+    height: 3rem;
+}
+
+#playersTable thead th{
+    border: 1px solid #000;
 }
 
 #playersTable a{
@@ -124,17 +127,17 @@ option {
     color: white;
 }
 
-#playersTable tr{
-    background-color: #7E2553;
-    color: white;
+#playersTableBody tr{
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
 }
 
-#playersTable tr:hover{
+#playersTableBody tr:hover{
     background-color: #FAEF5D;
     color: black;
 }
 
-#playersTable td{
+#playersTableBody td{
     padding: 5px;
     text-align: left;
     font-size: 16px;
@@ -159,6 +162,39 @@ option {
     margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 60%;
-    height: 60%;
+    border-radius: 1rem;
+    width: 50%;
+    height: 50%;
+    user-select: none;
+}
+
+#modalClose{
+    position: absolute;
+    font-size: 3rem;
+    top: 0;
+    right: 1rem;
+    margin: 1%;
+    cursor: pointer;
+    color: white;
+}
+
+#teamsDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+#teamsDiv h1{
+    font-size: 3rem;
+    color: white;
+    border-bottom: 2px solid white;
+    margin-bottom: 2rem;
+}
+
+.teamList{
+    font-size: 2rem;
 }

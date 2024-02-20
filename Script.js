@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 let tbody = document.getElementById('playersTableBody');
+let tableCount = document.getElementById('playerCount');
 
 //Populate Table
 function populateTable() {
@@ -13,6 +14,7 @@ function populateTable() {
         cell1.innerHTML = p.name;
         cell2.innerHTML = p.position;
     });
+    tableCount.innerHTML = "Count: " + playerList.length;
 }
 
 // //Player Sort
@@ -106,13 +108,33 @@ let randomPlayersModal = document.getElementById('randomPlayersModal');
 let modalContent = document.getElementById('modalContent');
 let modalClose = document.getElementById('modalClose');
 let randomizeButton = document.getElementById('randomizeButton');
+let team1Players = document.getElementById('team1Players');
+let team2Players = document.getElementById('team2Players');
 
 randomizeButton.onclick = function () {
-    let randomPlayers = [];
+    team1Players.innerHTML = '';
+    team2Players.innerHTML = '';
+    let randomPlayers1 = [];
+    let randomPlayers2 = [];
     for (let i = 0; i < 3; i++) {
         let randomIndex = Math.floor(Math.random() * playerList.length);
-        randomPlayers.push(playerList[randomIndex].name);
+        randomPlayers1.push(playerList[randomIndex].name);
     }
-    modalContent.innerHTML = randomPlayers.join('<br>');
+    for (let i = 0; i < 3; i++) {
+        let randomIndex = Math.floor(Math.random() * playerList.length);
+        randomPlayers2.push(playerList[randomIndex].name);
+    }
+    team1Players.innerHTML = randomPlayers1.join('<br>');
+    team2Players.innerHTML = randomPlayers2.join('<br>');
     randomPlayersModal.style.display = 'block';
+}
+
+modalClose.onclick = function () {
+    randomPlayersModal.style.display = 'none';
+}
+
+window.onclick = function (e) {
+    if (e.target == randomPlayersModal) {
+        randomPlayersModal.style.display = 'none';
+    }
 }
