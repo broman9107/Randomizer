@@ -111,22 +111,29 @@ let randomizeButton = document.getElementById('randomizeButton');
 let team1Players = document.getElementById('team1Players');
 let team2Players = document.getElementById('team2Players');
 
+//Randomize Teams
 randomizeButton.onclick = function () {
     team1Players.innerHTML = '';
     team2Players.innerHTML = '';
+    let numOfPlayers = document.getElementById('numberOfPlayers');
     let randomPlayers1 = [];
     let randomPlayers2 = [];
-    for (let i = 0; i < 3; i++) {
+    if(numOfPlayers.value > playerList.length || numOfPlayers.value < 1) {
+        alert('Please enter a valid number of players');
+        return;
+    }
+    for (let i = 0; i < numOfPlayers.value ; i++) {
         let randomIndex = Math.floor(Math.random() * playerList.length);
         randomPlayers1.push(playerList[randomIndex].name);
     }
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < numOfPlayers.value; i++) {
         let randomIndex = Math.floor(Math.random() * playerList.length);
         randomPlayers2.push(playerList[randomIndex].name);
     }
     team1Players.innerHTML = randomPlayers1.join('<br>');
     team2Players.innerHTML = randomPlayers2.join('<br>');
     randomPlayersModal.style.display = 'block';
+    numOfPlayers.value = '';
 }
 
 modalClose.onclick = function () {

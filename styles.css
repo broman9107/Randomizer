@@ -19,7 +19,7 @@ body{
     margin: 20px 0 0 20px;  
 }
 
-#playerNameInput{
+#playerNameInput, #numberOfPlayers{
     font-size: 1.5rem;
     padding: 10px;
     border: 1px solid #000;
@@ -158,13 +158,13 @@ option {
 #modalContent{
     position: relative;
     color: white;
-    background-color: #7E2553;
+    background-color: #99002e;
     margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
     border-radius: 1rem;
     width: 50%;
-    height: 50%;
+    height: fit-content;
     user-select: none;
 }
 
@@ -173,7 +173,6 @@ option {
     font-size: 3rem;
     top: 0;
     right: 1rem;
-    margin: 1%;
     cursor: pointer;
     color: white;
 }
