@@ -1,3 +1,15 @@
+//Testing for width and height
+//------------------------------------------------------------------------//
+// window.onresize = function () {
+//     let windowWidth = document.getElementById("width");
+//     let windowHeight = document.getElementById("height");
+//     windowWidth.innerHTML = window.innerWidth;
+//     windowHeight.innerHTML = window.innerHeight;
+// }
+//------------------------------------------------------------------------//
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     populateTable();
 });
@@ -16,45 +28,6 @@ function populateTable() {
     });
     tableCount.innerHTML = "Count: " + playerList.length;
 }
-
-// //Player Sort
-// let playerSort = document.getElementById('playerSort');
-// let ascending = true; // Flag to track sorting order
-
-// playerSort.onclick = function () {
-//     playerList.sort((a, b) => {
-//         if (a.name < b.name) {
-//             return ascending ? -1 : 1; // Ascending or descending based on flag
-//         } else if (a.name > b.name) {
-//             return ascending ? 1 : -1; // Ascending or descending based on flag
-//         } else {
-//             return 0;
-//         }
-//     });
-//     ascending = !ascending; // Toggle sorting order
-//     tbody.innerHTML = '';
-//     populateTable();
-//     //tbody.scrollIntoView({ behavior: "smooth" , block: "start" }); // Scrolls to top of table
-// };
-
-// //Position Sort
-// let positionSort = document.getElementById('positionSort');
-// let ascending2 = true; // Flag to track sorting order
-
-// positionSort.onclick = function () {
-//     playerList.sort((a, b) => {
-//         if (a.position < b.position) {
-//             return ascending2 ? -1 : 1; // Ascending or descending based on flag
-//         } else if (a.position > b.position) {
-//             return ascending2 ? 1 : -1; // Ascending or descending based on flag
-//         } else {
-//             return 0;
-//         }
-//     });
-//     ascending2 = !ascending2; // Toggle sorting order
-//     tbody.innerHTML = '';
-//     populateTable();
-// }
 
 //Sort Players
 let playerSort = document.getElementById('playerSort');
@@ -146,4 +119,11 @@ window.onclick = function (e) {
     if (e.target == randomPlayersModal) {
         randomPlayersModal.style.display = 'none';
     }
+}
+
+window.onresize = function () {
+    let windowWidth = document.getElementById("width");
+    let windowHeight = document.getElementById("height");
+    windowWidth.innerHTML = window.innerWidth;
+    windowHeight.innerHTML = window.innerHeight;
 }

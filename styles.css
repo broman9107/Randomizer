@@ -8,16 +8,19 @@ body{
     font-family: 'Poppins', sans-serif;
     background-color: #1D2B53;
     display: grid;
-    height: 95vh;
-    width: 95vw;
-    grid-template-columns: 40% 60%;
-    margin: 10px;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
-#addPlayerDiv{
-    margin: 20px 0 0 20px;  
+#leftSideScreen{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
 }
+
+
 
 #playerNameInput, #numberOfPlayers{
     font-size: 1.5rem;
@@ -92,25 +95,35 @@ option {
     animation: none;
 }
 
+
+
+/* Right Side of Screen */
+
+#rightSideScreen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
 #showPlayersDiv{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
+    justify-content: center;
     height: 90%;
+    width: 60%;
     overflow: auto;
 }
 
 #playersTable{
-    width: 60%;
-    border-spacing: 0;
+    width: 100%;
+    border-collapse: collapse;
     user-select: none;
 }
 
 #playersTable thead, tfoot{
     position: sticky;
-    top: 0;
-    bottom: 0;
+    top: -1px;
+    bottom: -1px;
     text-align: center;
     font-size: 1.5rem;
     background-color: #FF004D;
@@ -118,9 +131,7 @@ option {
     height: 3rem;
 }
 
-#playersTable thead th{
-    border: 1px solid #000;
-}
+
 
 #playersTable a{
     text-decoration: none;

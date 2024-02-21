@@ -8,44 +8,54 @@
 </head>
 <body>
     <!--Left side of screen div-->
-    <div id="addPlayerDiv">
-        <form id="addPlayerForm">
-            <input type="text" id="playerNameInput" placeholder="Enter player name" required>
-            <select id="playerPositionInput" required>
-                <option value="" disabled selected hidden>Position</option>
-                <option value="Guard">Guard</option>
-                <option value="Forward">Forward</option>
-                <option value="Center">Center</option>
-            </select>
-            <input type="submit" id="playerNameSubmit" value="Add Player"></input>
-        </form>
-        <form id="randomizeForm">
-            <input type="number" id="numberOfPlayers" placeholder="Players Per Team">
-            <input type="submit" id="randomizeButton" value="Randomize"></input>
-        </form>
-    </div>
-    <!--Right side of screen div-->
-    <div id="showPlayersDiv">
-        <table id="playersTable">
-            <thead>
-                <tr>
-                    <th><a href="#" id="playerSort">Player</a></th>
-                    <th><a href="#" id="positionSort">Position</a></th>
-                </tr>
-            </thead>
-            <tbody id="playersTableBody">
-                <!-- Add table rows dynamically using JavaScript -->
-            </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="2" id="playerCount">
-                        <!-- Add Player Count with JavaScript -->
-                    </td>
-                </tr>
-            </tfoot>
-        </table>
+    <div id="leftSideScreen">
+        <div id="addPlayerDiv">
+            <form id="addPlayerForm">
+                <input type="text" id="playerNameInput" placeholder="Enter player name" required>
+                <select id="playerPositionInput" required>
+                    <option value="" disabled selected hidden>Position</option>
+                    <option value="Guard">Guard</option>
+                    <option value="Forward">Forward</option>
+                    <option value="Center">Center</option>
+                </select>
+                <input type="submit" id="playerNameSubmit" value="Add Player"></input>
+            </form>
+        </div>
+        <div id="randomizeDiv">
+            <form id="randomizeForm">
+                <input type="number" id="numberOfPlayers" placeholder="Players Per Team">
+                <input type="submit" id="randomizeButton" value="Randomize"></input>
+            </form>
+        </div> 
     </div>
 
+<!-- Testing for height and width
+        <h1 id="width"></h1>
+        <h1 id="height"></h1> -->
+    <!--Right side of screen div-->
+    
+    <div id="rightSideScreen">
+        <div id="showPlayersDiv">
+            <table id="playersTable">
+                <thead>
+                    <tr>
+                        <th><a href="#" id="playerSort">Player</a></th>
+                        <th><a href="#" id="positionSort">Position</a></th>
+                    </tr>
+                </thead>
+                <tbody id="playersTableBody">
+                    <!-- Add table rows dynamically using JavaScript -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="2" id="playerCount">
+                            <!-- Add Player Count with JavaScript -->
+                        </th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
     <!--Modal for random players-->
     <div id="randomPlayersModal" class="modal">
         <div id="modalContent">
