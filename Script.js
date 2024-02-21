@@ -110,9 +110,11 @@ let modalClose = document.getElementById('modalClose');
 let randomizeButton = document.getElementById('randomizeButton');
 let team1Players = document.getElementById('team1Players');
 let team2Players = document.getElementById('team2Players');
+let randomizeForm = document.getElementById('randomizeForm');
 
 //Randomize Teams
-randomizeButton.onclick = function () {
+randomizeForm.onsubmit = function (event) {
+    event.preventDefault();
     team1Players.innerHTML = '';
     team2Players.innerHTML = '';
     let numOfPlayers = document.getElementById('numberOfPlayers');
