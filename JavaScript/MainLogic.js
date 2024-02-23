@@ -8,8 +8,6 @@
 // }
 //------------------------------------------------------------------------//
 
-
-
 document.addEventListener('DOMContentLoaded', function () {
     populateTable();
 });
@@ -74,56 +72,4 @@ addPlayerForm.onsubmit = function (e) {
     });
     addPlayerForm.reset();
     populateTable();
-}
-
-//Modal
-let randomPlayersModal = document.getElementById('randomPlayersModal');
-let modalContent = document.getElementById('modalContent');
-let modalClose = document.getElementById('modalClose');
-let randomizeButton = document.getElementById('randomizeButton');
-let team1Players = document.getElementById('team1Players');
-let team2Players = document.getElementById('team2Players');
-let randomizeForm = document.getElementById('randomizeForm');
-
-//Randomize Teams
-randomizeForm.onsubmit = function (event) {
-    event.preventDefault();
-    team1Players.innerHTML = '';
-    team2Players.innerHTML = '';
-    let numOfPlayers = document.getElementById('numberOfPlayers');
-    let randomPlayers1 = [];
-    let randomPlayers2 = [];
-    if(numOfPlayers.value > playerList.length || numOfPlayers.value < 1) {
-        alert('Please enter a valid number of players');
-        return;
-    }
-    for (let i = 0; i < numOfPlayers.value ; i++) {
-        let randomIndex = Math.floor(Math.random() * playerList.length);
-        randomPlayers1.push(playerList[randomIndex].name);
-    }
-    for (let i = 0; i < numOfPlayers.value; i++) {
-        let randomIndex = Math.floor(Math.random() * playerList.length);
-        randomPlayers2.push(playerList[randomIndex].name);
-    }
-    team1Players.innerHTML = randomPlayers1.join('<br>');
-    team2Players.innerHTML = randomPlayers2.join('<br>');
-    randomPlayersModal.style.display = 'block';
-    numOfPlayers.value = '';
-}
-
-modalClose.onclick = function () {
-    randomPlayersModal.style.display = 'none';
-}
-
-window.onclick = function (e) {
-    if (e.target == randomPlayersModal) {
-        randomPlayersModal.style.display = 'none';
-    }
-}
-
-window.onresize = function () {
-    let windowWidth = document.getElementById("width");
-    let windowHeight = document.getElementById("height");
-    windowWidth.innerHTML = window.innerWidth;
-    windowHeight.innerHTML = window.innerHeight;
 }

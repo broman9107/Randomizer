@@ -11,8 +11,9 @@
     <div id="leftSideScreen">
         <div id="addPlayerDiv">
             <form id="addPlayerForm">
-                <input type="text" id="playerNameInput" placeholder="Enter player name" required>
-                <select id="playerPositionInput" required>
+                <h1>Add Player</h1>
+                <input type="text" id="playerNameInput" class="inputBox" placeholder="Enter player name" title="Enter Player Name" required>
+                <select id="playerPositionInput" title="Position" class="inputBox"required>
                     <option value="" disabled selected hidden>Position</option>
                     <option value="Guard">Guard</option>
                     <option value="Forward">Forward</option>
@@ -22,8 +23,13 @@
             </form>
         </div>
         <div id="randomizeDiv">
+            <h1>Randomize Teams</h1>
             <form id="randomizeForm">
-                <input type="number" id="numberOfPlayers" placeholder="Players Per Team">
+                <p>Select number of each position for each team!</p>
+                <input type="number" id="numberOfGuards" class="numOfPosition" placeholder="Guards" title="Guards" min="0">
+                <input type="number" id="numberOfForwards" class="numOfPosition" placeholder="Forwards" title="Forwards" min="0">
+                <input type="number" id="numberOfCenters" class="numOfPosition" placeholder="Centers" title="Centers" min="0">
+                <!-- <input type="number" id="numberOfTeams" class="numOfPosition" placeholder="Number Of Teams" title="Number Of Teams" min="0"> -->
                 <input type="submit" id="randomizeButton" value="Randomize"></input>
             </form>
         </div> 
@@ -77,7 +83,10 @@
         </div>
     </div>
 
-    <script src="Players.js"></script>
-    <script src="Script.js"></script>  
+    
+    <script src="JavaScript/Randomizer.js"></script>
+    <script src="JavaScript/PlayerClass.js"></script>
+    <script src="JavaScript/MainLogic.js"></script>
+    <script src="JavaScript/Modal.js"></script>  
 </body>
 </html>

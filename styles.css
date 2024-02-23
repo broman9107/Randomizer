@@ -15,15 +15,40 @@ body{
 }
 
 #leftSideScreen{
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 20% 80%;
 }
 
+#addPlayerDiv{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
 
+#addPlayerDiv h1, #randomizeDiv h1{
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 20px;
+}
 
-#playerNameInput, #numberOfPlayers{
+#randomizeDiv{
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    align-self: flex-start;
+}
+
+.inputBox{
     font-size: 1.5rem;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.numOfPosition{
+    font-size: 1.2rem;
+    width: 150px;
     padding: 10px;
     border: 1px solid #000;
     border-radius: 5px;
@@ -42,10 +67,6 @@ option {
 }
 
 #playerPositionInput{
-    font-size: 1.5rem;
-    padding: 10px;
-    border: 1px solid #000;
-    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -65,9 +86,19 @@ option {
     transition: background-color 0.3s ease;
 }
 
-#randomizeButton {
+#randomizeForm p{
     font-size: 1.5rem;
+    color: white;
+    margin-bottom: 10px;
+
+}
+
+#randomizeButton {
+    display: block;
+    width: 30%;
+    font-size: 2rem;
     padding: 15px;
+    margin: 2rem 0;
     border: 1px solid #000;
     border-radius: 5px;
     cursor: pointer;
@@ -95,7 +126,11 @@ option {
     animation: none;
 }
 
-
+#numberOfTeams{
+    display: block;
+    width: 200px;
+    margin: 6px 0;
+}
 
 /* Right Side of Screen */
 

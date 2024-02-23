@@ -9,7 +9,6 @@ class Player {
     }
 }
 
-//A list of 50 current and historic NBA Players
 let playerList = [
     new Player('Michael Jordan', 'Guard'),
     new Player('Lebron James', 'Forward'),
@@ -88,5 +87,15 @@ let playerList = [
     new Player('Saddiq Bey', 'Forward'),
     new Player('Tyrese Maxey', 'Guard'),
     new Player('Desmond Bane', 'Guard'),
-    new Player('Payton Pritchard', 'Guard')
+    new Player('Payton Pritchard', 'Guard'),
+    new Player('Leandro Bolmaro', 'Guard'),
+    new Player('Theo Maledon', 'Guard'),
+    new Player('Jahmi\'us Ramsey', 'Guard'),
+    new Player('Zeke Nnaji', 'Forward'),
+    new Player('Nico Mannion', 'Guard'),
+    new Player('Isaiah Stewart', 'Center'),
+    new Player('Jalen Smith', 'Forward'),
+    new Player('Kira Lewis Jr.', 'Guard'),
+    new Player('Precious Achiuwa', 'Forward'),
+    new Player('Jalen Smith', 'Forward'),
 ];
