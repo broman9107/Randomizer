@@ -4,6 +4,8 @@ randomizeForm.onsubmit = function (event) {
     event.preventDefault();
     team1Players.innerHTML = '';
     team2Players.innerHTML = '';
+
+    let numOfTeams = parseInt(document.getElementById('numberOfTeams').value, 10);
     let numOfGuards = parseInt(document.getElementById('numberOfGuards').value, 10);
     numOfGuards = isNaN(numOfGuards) ? 0 : numOfGuards;
     let numOfForwards = parseInt(document.getElementById('numberOfForwards').value, 10);
@@ -16,6 +18,17 @@ randomizeForm.onsubmit = function (event) {
         alert('Please enter a valid number of players');
         return;
     }
+
+    // if(numOfTeams < 1 || isNaN(numOfTeams)) {
+    //     alert('Please enter a valid number of teams');
+    //     return;
+    // }
+
+    // for (let i = 0; i < numOfTeams; i++) {
+    //     randomizeTeam(guards, numOfGuards)
+    //     .concat(randomizeTeam(forwards, numOfForwards));
+    //     randomizeTeam(centers, numOfCenters);
+    // }
 
     let guards = playerList.filter(player => player.position === 'Guard');
     let forwards = playerList.filter(player => player.position === 'Forward');
