@@ -166,8 +166,6 @@ option {
     height: 3rem;
 }
 
-
-
 #playersTable a{
     text-decoration: none;
     color: white;
@@ -190,6 +188,8 @@ option {
     border: 1px solid #000;
 }
 
+/* Modal */
+
 #randomPlayersModal{
     display: none;
     position: fixed;
@@ -206,12 +206,12 @@ option {
     color: white;
     background-color: #99002e;
     margin: 10% auto;
-    padding: 20px;
+    padding: 2rem;
     border: 1px solid #888;
     border-radius: 1rem;
-    width: 50%;
+    width: fit-content;
     height: fit-content;
-    user-select: none;
+    user-select: none
 }
 
 #modalClose{
@@ -224,12 +224,12 @@ option {
 }
 
 #teamsDiv{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     height: 100%;
     width: 100%;
+    padding: 2rem;
+    gap: 1rem;
     text-align: center;
 }
 
@@ -237,9 +237,9 @@ option {
     font-size: 3rem;
     color: white;
     border-bottom: 2px solid white;
-    margin-bottom: 2rem;
+    margin: 1rem 0;
 }
 
 .teamList{
-    font-size: 2rem;
+    font-size: 1.5rem;
 }

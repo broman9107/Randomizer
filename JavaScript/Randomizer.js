@@ -2,8 +2,8 @@
 let randomizeForm = document.getElementById('randomizeForm');
 randomizeForm.onsubmit = function (event) {
     event.preventDefault();
-    team1Players.innerHTML = '';
-    team2Players.innerHTML = '';
+    // team1Players.innerHTML = '';
+    // team2Players.innerHTML = '';
 
     let numOfTeams = parseInt(document.getElementById('numberOfTeams').value, 10);
     let numOfGuards = parseInt(document.getElementById('numberOfGuards').value, 10);
@@ -24,26 +24,28 @@ randomizeForm.onsubmit = function (event) {
     //     return;
     // }
 
-    // for (let i = 0; i < numOfTeams; i++) {
-    //     randomizeTeam(guards, numOfGuards)
-    //     .concat(randomizeTeam(forwards, numOfForwards));
-    //     randomizeTeam(centers, numOfCenters);
-    // }
-
     let guards = playerList.filter(player => player.position === 'Guard');
     let forwards = playerList.filter(player => player.position === 'Forward');
     let centers = playerList.filter(player => player.position === 'Center');
 
-    let randomPlayers1 = randomizePlayers(guards, numOfGuards)
-        .concat(randomizePlayers(forwards, numOfForwards))
-        .concat(randomizePlayers(centers, numOfCenters));
+    for (let i = 1; i <= numOfTeams; i++) {
+        let randomPlayers = randomizePlayers(guards, numOfGuards)
+            .concat(randomizePlayers(forwards, numOfForwards))
+            .concat(randomizePlayers(centers, numOfCenters));
+        let teamsDiv = document.getElementById('teamsDiv');
+        teamsDiv.innerHTML += `<div><h1>Team ${i}</h1>` + `<p class="teamList">${randomPlayers.join('<br>')}<p></div>`;
+    }
 
-    let randomPlayers2 = randomizePlayers(guards, numOfGuards)
-        .concat(randomizePlayers(forwards, numOfForwards))
-        .concat(randomizePlayers(centers, numOfCenters));
+    // let randomPlayers1 = randomizePlayers(guards, numOfGuards)
+    //     .concat(randomizePlayers(forwards, numOfForwards))
+    //     .concat(randomizePlayers(centers, numOfCenters));
 
-    team1Players.innerHTML = randomPlayers1.join('<br>');
-    team2Players.innerHTML = randomPlayers2.join('<br>');
+    // let randomPlayers2 = randomizePlayers(guards, numOfGuards)
+    //     .concat(randomizePlayers(forwards, numOfForwards))
+    //     .concat(randomizePlayers(centers, numOfCenters));
+
+    // team1Players.innerHTML = randomPlayers1.join('<br>');
+    // team2Players.innerHTML = randomPlayers2.join('<br>');
     randomPlayersModal.style.display = 'block';
     randomizeForm.reset();
 }
