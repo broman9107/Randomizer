@@ -132,6 +132,8 @@ option {
     margin: 6px 0;
 }
 
+
+
 /* Right Side of Screen */
 
 #rightSideScreen{
@@ -225,7 +227,7 @@ option {
 
 #teamsDiv{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr;   This is being set in JavaScript */ 
     height: 100%;
     width: 100%;
     padding: 2rem;
